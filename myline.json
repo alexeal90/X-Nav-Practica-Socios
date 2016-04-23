@@ -1,0 +1,23 @@
+{
+    "Alex" : [{
+            "autor": "alex",
+            "avatar": "images/nacho.jpg",
+            "titulo": "Mensaje de prueba enviado 1",
+            "contenido" : "Esto es un mensaje de prueba enviado 1",
+            "fecha" : "18/04/16 18:24:47"
+        }],
+    "Alex" : [{
+            "autor": "alex",
+            "avatar": "images/nacho.jpg",
+            "titulo": "Mensaje de prueba enviado 2",
+            "contenido" : "Esto es un mensaje de prueba enviado 2",
+            "fecha" : "18/04/16 14:23:21"
+        }],
+    "Alex" : [{
+            "autor": "alex",
+            "avatar": "images/nacho.jpg",
+            "titulo": "Mensaje de prueba enviado 3",
+            "contenido" : "Esto es un mensaje de prueba enviado 3",
+            "fecha" : "18/04/16 09:54:52"
+        }]
+}

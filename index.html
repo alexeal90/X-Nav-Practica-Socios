@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="index.js"></script>
+	<link href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="avatar">
+		<img id="fotoPerfil" src="images/avatar.png"></img>
+	</div>
+	<div class="cabecera">
+		<p id="ered"><big>TUITA</big>, exprésate!</p>
+	</div>
+	<div id="tabs">
+	  <ul>
+	    <li><a href="#tabs-1">Home</a></li>
+			<li><a href="#tabs-2">Mis mensajes</a></li>
+			<li><a href="#tabs-3">Conversaciones</a></li>
+			<li><a href="#tabs-4">Configuracion</a></li>
+			<li id="buscar">
+  			<input>
+				<button> Buscar </button>
+			</li>
+			<li><button id="logout"> Desconectar</button></li>
+	  </ul>
+
+	  <div id="tabs-1">
+			<div id="buttonNew">
+				<button id="newMsgs"></button>
+			</div>
+			<div id="nuevos" class="accordion"></div>
+	  </div>
+
+		<div id="tabs-2" class="accordion">
+
+		</div>
+
+		<div id="tabs-3">
+			<div id="droppable" class="ui-widget-header">
+				<p>Papelera</p>
+			</div>
+			<div class="draggable" id="draggable1">
+				<p class="Conver">Conversacion con Nacho</p>
+				<hr>
+				<p>Nacho: Como llevas la practica?</p>
+				<p align="right">Yo: Tengo alguna duda...</p>
+				<p>Nacho: Pregunta el proximo dia</p>
+				<p align="right">Yo: si, eso hare</p>
+				<div class="texto1">
+					<input type="text" name="chat"></input>
+					<button> enviar </button>
+				</div>
+			</div>
+			<div class="draggable" id="draggable2">
+				<p class="Conver">Conversacion con Sandra</p>
+				<hr>
+				<p align="right">Yo: Hola!</p>
+				<p align="right">Yo: que tal?</p>
+				<p>Sandra: Bien, y tu?</p>
+				<div class="texto2">
+					<input type="text" name="chat"></input>
+					<button> enviar </button>
+				</div>
+			</div>
+			<div class="draggable" id="draggable3">
+				<p class="Conver">Conversacion con Tony</p>
+				<hr>
+				<p align="right">Yo: Estas ahi?</p>
+				<div class="texto3" style="position: relative,
+				top: 100px">
+					<input type="text" name="chat"></input>
+					<button> enviar </button>
+				</div>
+			</div>
+		</div>
+
+		<div id="tabs-4">
+	    <p>
+				<ul id="config">
+				  <li>Datos</li>
+				  <li>Foto perfil
+						<ul>
+				      <li>Cambiar</li>
+				      <li>Eliminar</li>
+				    </ul>
+					</li>
+				  <li>Privacidad
+				    <ul>
+							<li>privatizar cuenta</li>
+				      <li>Bloquear contacto</li>
+							<li>Lista bloqueados
+								<ul>
+				          <li class="ui-state-disabled">Juan</li>
+				          <li class="ui-state-disabled">Maria</li>
+				        </ul>
+							</li>
+				      <li>Cerrar cuenta
+								<ul>
+				          <li class="ui-state-disabled">¿Por cuanto?</li>
+				          <li>Temporalmente</li>
+									<li>Siempre</li>
+				        </ul>
+							</li>
+				    </ul>
+				  </li>
+					<li>
+						<button> Agregar persona </button>
+					</li>
+				  	<div id="textout" title="Adiós!">
+				    	<p align="center" style="position:relative; top: 20px; font-size: 150%;">
+				      	Te has desconectado con éxito. Vuelve pronto.
+				    	</p>
+				  	</div>
+				</ul>
+			</p>
+	  </div>
+	</div>
+
+	<div id="tt" align="center">
+		<p> Lo mas comentado: </p>
+		<hr>
+		<p>#DiaDelLibro</p>
+		<p>#SantJordi</p>
+		<p>#FelizDia</p>
+		<p>#Sabado</p>
+		<p>#Finde</p>
+		<p>#Sol</p>
+	</div>
+
+</body>
+</html>

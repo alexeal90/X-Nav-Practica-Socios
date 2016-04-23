@@ -1,0 +1,108 @@
+html {
+    /* To make use of full height of page*/
+    min-height: 100%;
+    margin: 0;
+
+}
+
+body{
+  font: 62.5% "Trebuchet MS", sans-serif;
+  min-height: 100%;
+  margin: 20px;
+  background-image: url("images/fondo_luz.jpg");
+  /*background: -webkit-linear-gradient(lightgrey, #7a7a7a);*/
+}
+
+
+.demoHeaders {
+  margin-top: 2em;
+}
+.ui-menu {
+  width: 150px;
+}
+
+.cabecera{
+  float:left;
+  top: 10px;
+  height: 150px;
+  width: 90%;
+  background: -webkit-linear-gradient(#009bff, lightblue);
+  border-radius: 15px 15px 15px 15px;
+}
+
+.draggable {
+  width: 170px;
+  height: 200px;
+  padding: 0.5em;
+  float: left;
+  margin: 50px 10px 10px 0px;
+  border-radius: 15px 15px 15px 15px;
+  background: -webkit-linear-gradient(lightgreen, white);
+}
+
+.draggable * button{
+  float: right;
+}
+
+#droppable {
+  width: 158px;
+  height: 192px;
+  padding: 0.5em;
+  float: left;
+  margin: 20px;
+  background-color: rgba(180, 180, 180, 0.8);
+}
+
+#tabs-3 .draggable .Conver{
+  font-weight: bold;
+  font-size: 120%;
+  height:20px
+}
+
+#avatar{
+  position: absolute;
+  left: 75%;
+  width: 30%;
+}
+
+#fotoPerfil{
+  height: 600%;
+  width: 75%;
+}
+
+#tabs{
+  float:left;
+  position:relative;
+  top: 5px;
+  width: 75%;
+}
+
+#logout{
+  position: relative;
+  left: 520%;
+}
+
+#buscar{
+  position: relative;
+  left: 13%;
+}
+
+#ered{
+  position:relative;
+  bottom: 10%;
+  left: 5%;
+  font-size: 550%;
+  color: darkblue;
+  text-shadow: 0.05em 0.05em 0.2em #333;
+}
+
+#tt{
+  font: 150% "Trebuchet MS", sans-serif;
+  position: relative;
+  float:right;
+  margin-right: 14px;
+  top: 100px;
+  height: 70%;
+  width: 23.15%;
+  background: -webkit-linear-gradient(lightgrey, #7a7a7a);
+}
