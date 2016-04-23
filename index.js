@@ -14,6 +14,27 @@ $(document).ready(function(){
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
 
+    function organizar_val_update(val,num){
+      var i_datos = 0;
+
+      for (user = 0; user<num; user++){
+        autor_val_up[user] = val[i_datos];
+        i_datos++;
+        avatar_val_up[user] = "<img class='col-md-2' src='" + val[i_datos] + "' height='100' width='100'></img>";
+        i_datos++;
+        titulo_val_up[user] = val[i_datos];
+        i_datos++;
+        contenido_val_up[user] = val[i_datos];
+        i_datos++;
+        fecha_val_up[user] = val[i_datos];
+        i_datos++;
+      };
+
+    };
+
+
+
+
     $("#newMsgs").append("hay 3 mensajes nuevos");
     $("#newMsgs").click(function(){
       if(show == true){
@@ -44,9 +65,10 @@ $(document).ready(function(){
           });
         });
 
-        //organizar_val_update(valores_up, num_usuarios);
+        organizar_val_update(valores_up, num_usuarios);
 
         for (user = 0; user<num_usuarios; user++){
+          console.log("entra " + user);
           $("<h3>",{"class":"autor_noticia" + user,
             html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
             }).appendTo("#nuevos");
