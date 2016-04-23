@@ -7,8 +7,6 @@ $(document).ready(function(){
     contenido_val_up = [];
     fecha_val_up = [];
 
-    valores_up = [];
-    num_usuarios = 0;
   	$("#tabs").tabs();
   	$("#config").menu();
     //$(".accordion").accordion();
@@ -17,22 +15,7 @@ $(document).ready(function(){
     var show = false;
     var cargado = false;
 
-    function parseaUpdate(data, valores_up, num_usuarios){
-      var i = 0;
-      console.log("entraa");
-      console.log(data);
-      $.each(data,function (key,value){
-        num_usuarios++;
-        $.each(value,function (key,value){
-          $.each(value,function (key,value){
-            valores_up[i] = value;
-            i++;
-          });
-        });
-      });
-    };
-
-    function organizarUpdate(val,num){
+    function organizar_val_update(val,num){
       var i_datos = 0;
 
       for (user = 0; user<num; user++){
@@ -50,9 +33,6 @@ $(document).ready(function(){
     };
 
     function acordeonUpdate(num_usuarios){
-      console.log("datosUp2: ")
-      console.log(valores_up);
-      console.log("------")
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor_noticia" + user,
           html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
@@ -62,6 +42,7 @@ $(document).ready(function(){
           html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
           }).appendTo("#nuevos");
       }
+      $("#nuevos").accordion({heightStyle: "content"});
     };
 
     $("#newMsgs").append("hay 3 mensajes nuevos");
@@ -83,14 +64,21 @@ $(document).ready(function(){
         $.getJSON("update.json")
         .done(function(data) {
           cargado = true;
+          var i = 0;
+          var valores_up = [];
+          var num_usuarios = 0;
+          $.each(data,function (key,value){
+            num_usuarios++;
+            $.each(value,function (key,value){
+              $.each(value,function (key,value){
+                valores_up[i] = value;
+                i++;
+              });
+            });
+          });
 
-          console.log("datos: ")
-          console.log(data);
-          console.log("------")
-          parseaUpdate(data, valores_up, num_usuarios);
-          organizarUpdate(valores_up, num_usuarios);
+          organizar_val_update(valores_up, num_usuarios);
           acordeonUpdate(num_usuarios);
-          $("#nuevos").accordion({heightStyle: "content"});
         })
 
         .fail(function(data){
