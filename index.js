@@ -50,6 +50,9 @@ $(document).ready(function(){
     };
 
     function acordeonUpdate(num_usuarios){
+      console.log("datosUp2: ")
+      console.log(valores_up);
+      console.log("------")
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor_noticia" + user,
           html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
@@ -59,6 +62,7 @@ $(document).ready(function(){
           html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
           }).appendTo("#nuevos");
       }
+      
       $("#nuevos").accordion({heightStyle: "content"});
     };
 
@@ -86,9 +90,6 @@ $(document).ready(function(){
           console.log(data);
           console.log("------")
           parseaUpdate(data, valores_up, num_usuarios);
-          console.log("datosUp: ")
-          console.log(valores_up);
-          console.log("------")
           organizarUpdate(valores_up, num_usuarios);
           acordeonUpdate(num_usuarios);
         })
