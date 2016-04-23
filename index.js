@@ -15,7 +15,21 @@ $(document).ready(function(){
     var show = false;
     var cargado = false;
 
-    function organizar_val_update(val,num){
+    function parseaUpdate(data, valores_up, num_usuarios){
+      var i = 0;
+
+      $.each(data,function (key,value){
+        num_usuarios++;
+        $.each(value,function (key,value){
+          $.each(value,function (key,value){
+            valores_up[i] = value;
+            i++;
+          });
+        });
+      });
+    });
+
+    function organizarUpdate(val,num){
       var i_datos = 0;
 
       for (user = 0; user<num; user++){
@@ -64,20 +78,11 @@ $(document).ready(function(){
         $.getJSON("update.json")
         .done(function(data) {
           cargado = true;
-          var i = 0;
           var valores_up = [];
           var num_usuarios = 0;
-          $.each(data,function (key,value){
-            num_usuarios++;
-            $.each(value,function (key,value){
-              $.each(value,function (key,value){
-                valores_up[i] = value;
-                i++;
-              });
-            });
-          });
 
-          organizar_val_update(valores_up, num_usuarios);
+          parseaUpdate(data, valores_up, num_usuarios);
+          organizarUpdate(valores_up, num_usuarios);
           acordeonUpdate(num_usuarios);
         })
 
