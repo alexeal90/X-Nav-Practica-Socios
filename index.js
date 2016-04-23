@@ -14,7 +14,7 @@ $(document).ready(function(){
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
     var cargado = false;
-    
+
     function organizar_val_update(val,num){
       var i_datos = 0;
 
@@ -48,7 +48,7 @@ $(document).ready(function(){
         $("#newMsgs").append("Ocultar");
       }
 
-      if(cargado==true){
+      if(cargado==false){
         $.getJSON("update.json")
         .done(function(data) {
           cargado = true;
