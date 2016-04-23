@@ -7,6 +7,8 @@ $(document).ready(function(){
     contenido_val_up = [];
     fecha_val_up = [];
 
+    valores_up = [];
+    num_usuarios = 0;
   	$("#tabs").tabs();
   	$("#config").menu();
     //$(".accordion").accordion();
@@ -78,8 +80,7 @@ $(document).ready(function(){
         $.getJSON("update.json")
         .done(function(data) {
           cargado = true;
-          var valores_up = [];
-          var num_usuarios = 0;
+
 
           parseaUpdate(data, valores_up, num_usuarios);
           organizarUpdate(valores_up, num_usuarios);
