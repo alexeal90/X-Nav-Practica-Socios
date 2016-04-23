@@ -27,7 +27,7 @@ $(document).ready(function(){
           });
         });
       });
-    });
+    };
 
     function organizarUpdate(val,num){
       var i_datos = 0;
