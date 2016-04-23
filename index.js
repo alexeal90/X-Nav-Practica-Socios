@@ -30,7 +30,19 @@ $(document).ready(function(){
         fecha_val_up[user] = val[i_datos];
         i_datos++;
       };
+    };
 
+    function acordeonUpdate(){
+      for (user = 0; user<num_usuarios; user++){
+        $("<h3>",{"class":"autor_noticia" + user,
+          html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
+          }).appendTo("#nuevos");
+
+        $("<div>",{"class":"noticia" + user,
+          html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
+          }).appendTo("#nuevos");
+      }
+      $("#nuevos").accordion({heightStyle: "content"});
     };
 
     $("#newMsgs").append("hay 3 mensajes nuevos");
@@ -49,7 +61,6 @@ $(document).ready(function(){
       }
 
       if(cargado==false){
-        console.log("entra");
         $.getJSON("update.json")
         .done(function(data) {
           cargado = true;
@@ -67,22 +78,11 @@ $(document).ready(function(){
           });
 
           organizar_val_update(valores_up, num_usuarios);
-
-          for (user = 0; user<num_usuarios; user++){
-            console.log("entra " + user);
-            $("<h3>",{"class":"autor_noticia" + user,
-              html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
-              }).appendTo("#nuevos");
-
-    		    $("<div>",{"class":"noticia" + user,
-              html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
-              }).appendTo("#nuevos");
-          }
-          $("#nuevos").accordion({heightStyle: "content"});
+          acordeonUpdate();
         })
 
         .fail(function(data){
-          console.log("fallo");
+          console.log("No se ha podido cargar el archivo JSON");
         });
       };
     });
