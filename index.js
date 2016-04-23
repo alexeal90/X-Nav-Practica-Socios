@@ -13,7 +13,8 @@ $(document).ready(function(){
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
-
+    var cargado = false;
+    
     function organizar_val_update(val,num){
       var i_datos = 0;
 
@@ -47,40 +48,42 @@ $(document).ready(function(){
         $("#newMsgs").append("Ocultar");
       }
 
-      $.getJSON("update.json")
-      .done(function(data) {
-        var i = 0;
-        var valores_up = [];
-        var num_usuarios = 0;
-        $.each(data,function (key,value){
-          num_usuarios++;
-          $.each(value,function (key,value){
+      if(cargado==true){
+        $.getJSON("update.json")
+        .done(function(data) {
+          cargado = true;
+          var i = 0;
+          var valores_up = [];
+          var num_usuarios = 0;
+          $.each(data,function (key,value){
+            num_usuarios++;
             $.each(value,function (key,value){
-              valores_up[i] = value;
-              i++;
+              $.each(value,function (key,value){
+                valores_up[i] = value;
+                i++;
+              });
             });
           });
+
+          organizar_val_update(valores_up, num_usuarios);
+
+          for (user = 0; user<num_usuarios; user++){
+            console.log("entra " + user);
+            $("<h3>",{"class":"autor_noticia" + user,
+              html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
+              }).appendTo("#nuevos");
+
+    		    $("<div>",{"class":"noticia" + user,
+              html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
+              }).appendTo("#nuevos");
+          }
+          $("#nuevos").accordion({heightStyle: "content"});
+        })
+
+        .fail(function(data){
+          console.log("fallo");
         });
-
-        organizar_val_update(valores_up, num_usuarios);
-
-        for (user = 0; user<num_usuarios; user++){
-          console.log("entra " + user);
-          $("<h3>",{"class":"autor_noticia" + user,
-            html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
-            }).appendTo("#nuevos");
-
-  		    $("<div>",{"class":"noticia" + user,
-            html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
-            }).appendTo("#nuevos");
-        }
-        console.log("llega");
-        $("#nuevos").accordion({heightStyle: "content"});
-      })
-
-      .fail(function(data){
-        console.log("fallo");
-      });
+      };
     });
 
 
