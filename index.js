@@ -82,7 +82,9 @@ $(document).ready(function(){
         .done(function(data) {
           cargado = true;
 
+          console.log("datos: ")
           console.log(data);
+          console.log("------")
           parseaUpdate(data, valores_up, num_usuarios);
           organizarUpdate(valores_up, num_usuarios);
           acordeonUpdate(num_usuarios);
