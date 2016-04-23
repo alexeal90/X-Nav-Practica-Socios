@@ -9,7 +9,7 @@ $(document).ready(function(){
 
   	$("#tabs").tabs();
   	$("#config").menu();
-    $(".accordion").accordion();
+    //$(".accordion").accordion();
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
