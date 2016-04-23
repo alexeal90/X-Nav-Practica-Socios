@@ -32,7 +32,7 @@ $(document).ready(function(){
       };
     };
 
-    function acordeonUpdate(){
+    function acordeonUpdate(num_usuarios){
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor_noticia" + user,
           html: titulo_val_up[user] + ". Mensaje de " + autor_val_up[user] + ". " + fecha_val_up[user],
@@ -78,7 +78,7 @@ $(document).ready(function(){
           });
 
           organizar_val_update(valores_up, num_usuarios);
-          acordeonUpdate();
+          acordeonUpdate(num_usuarios);
         })
 
         .fail(function(data){
