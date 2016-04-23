@@ -49,6 +49,7 @@ $(document).ready(function(){
       }
 
       if(cargado==false){
+        console.log("entra");
         $.getJSON("update.json")
         .done(function(data) {
           cargado = true;
