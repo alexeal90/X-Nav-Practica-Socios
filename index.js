@@ -32,9 +32,6 @@ $(document).ready(function(){
 
     };
 
-
-
-
     $("#newMsgs").append("hay 3 mensajes nuevos");
     $("#newMsgs").click(function(){
       if(show == true){
@@ -77,7 +74,8 @@ $(document).ready(function(){
             html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
             }).appendTo("#nuevos");
         }
-        $( "#nuevos" ).accordion({heightStyle: "content"});
+        console.log("llega");
+        $("#nuevos").accordion({heightStyle: "content"});
       })
 
       .fail(function(data){
