@@ -86,6 +86,9 @@ $(document).ready(function(){
           console.log(data);
           console.log("------")
           parseaUpdate(data, valores_up, num_usuarios);
+          console.log("datosUp: ")
+          console.log(valores_up);
+          console.log("------")
           organizarUpdate(valores_up, num_usuarios);
           acordeonUpdate(num_usuarios);
         })
