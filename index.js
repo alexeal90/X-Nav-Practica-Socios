@@ -19,7 +19,8 @@ $(document).ready(function(){
 
     function parseaUpdate(data, valores_up, num_usuarios){
       var i = 0;
-      console.log("entra");
+      console.log("entraa");
+      console.log(data);
       $.each(data,function (key,value){
         num_usuarios++;
         $.each(value,function (key,value){
@@ -81,7 +82,7 @@ $(document).ready(function(){
         .done(function(data) {
           cargado = true;
 
-
+          console.log(data);
           parseaUpdate(data, valores_up, num_usuarios);
           organizarUpdate(valores_up, num_usuarios);
           acordeonUpdate(num_usuarios);
