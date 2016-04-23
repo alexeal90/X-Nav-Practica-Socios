@@ -62,8 +62,6 @@ $(document).ready(function(){
           html: avatar_val_up[user] + "<ul><li>" + contenido_val_up[user] +"</li></ul>",
           }).appendTo("#nuevos");
       }
-      
-      $("#nuevos").accordion({heightStyle: "content"});
     };
 
     $("#newMsgs").append("hay 3 mensajes nuevos");
@@ -92,6 +90,7 @@ $(document).ready(function(){
           parseaUpdate(data, valores_up, num_usuarios);
           organizarUpdate(valores_up, num_usuarios);
           acordeonUpdate(num_usuarios);
+          $("#nuevos").accordion({heightStyle: "content"});
         })
 
         .fail(function(data){
