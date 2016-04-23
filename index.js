@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     function parseaUpdate(data, valores_up, num_usuarios){
       var i = 0;
-
+      console.log("entra");
       $.each(data,function (key,value){
         num_usuarios++;
         $.each(value,function (key,value){
