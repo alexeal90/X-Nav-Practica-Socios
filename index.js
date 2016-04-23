@@ -1,6 +1,11 @@
 $(document).ready(function(){
   $(function() {
 
+    autor_val_up = [];
+    avatar_val_up = [];
+    titulo_val_up = [];
+    contenido_val_up = [];
+    fecha_val_up = [];
 
   	$("#tabs").tabs();
   	$("#config").menu();
