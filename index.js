@@ -48,13 +48,14 @@ $(document).ready(function(){
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
     //var cargado = false;
-    var num_usuarios = 0;
+
 
     $.getJSON("update.json")
       .done(function(data) {
         cargado = true;
         var i = 0;
         var valores_up = [];
+        var num_usuarios = 0;
         $.each(data,function (key,value){
           num_usuarios++;
           $.each(value,function (key,value){
@@ -67,10 +68,12 @@ $(document).ready(function(){
 
         guardarDatos(updateArray, valores_up, num_usuarios);
         acordeon(updateArray, num_usuarios, "#nuevos");
+        $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
       })
 
       .fail(function(data){
         console.log("No se ha podido cargar el archivo update.JSON");
+        $("#newMsgs").append("no hay mensajes nuevos");
       });
 
 
@@ -88,7 +91,7 @@ $(document).ready(function(){
         $("#newMsgs").append("Ocultar");
       }
     });
-    $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
+
 
 
 
