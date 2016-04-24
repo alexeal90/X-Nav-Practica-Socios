@@ -93,8 +93,7 @@ function prueba(){
         $("#newMsgs").append("Ocultar");
       }
     });
-
-}();
+};
 
 /*CORRESPONDIENTE A LA PARTE DE CONVERSACIONES*/
   	$( ".draggable" ).draggable({stack: "#droppable"});
