@@ -42,11 +42,11 @@ $(document).ready(function(){
       for (user = 0; user<num_usuarios; user++){
         var arrayIndex = 0;
         $("<h3>",{"class":"autor_noticia" + user,
-          html: array[arrayIndex][user] + ". Mensaje de " + array[arrayIndex++][user] + ". " + array[arrayIndex++][user],
+          html: array[2][user] + ". Mensaje de " + array[0][user] + ". " + array[4][user],
           }).appendTo("#nuevos");
 
         $("<div>",{"class":"noticia" + user,
-          html: array[arrayIndex++][user] + "<ul><li>" + array[arrayIndex++][user] +"</li></ul>",
+          html: array[1][user] + "<ul><li>" + array[3][user] +"</li></ul>",
           }).appendTo("#nuevos");
       };
       $("#nuevos").accordion({heightStyle: "content"});
