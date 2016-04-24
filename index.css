@@ -83,6 +83,7 @@ h3 .autor{
 }
 
 #logout{
+  cursor: pointer;
   position: relative;
   left: 520%;
 }
