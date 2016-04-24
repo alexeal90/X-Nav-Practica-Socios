@@ -48,14 +48,13 @@ $(document).ready(function(){
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
     //var cargado = false;
-
+    var num_usuarios = 0;
 
     $.getJSON("update.json")
       .done(function(data) {
         cargado = true;
         var i = 0;
         var valores_up = [];
-        var num_usuarios = 0;
         $.each(data,function (key,value){
           num_usuarios++;
           $.each(value,function (key,value){
