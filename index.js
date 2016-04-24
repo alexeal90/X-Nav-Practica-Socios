@@ -29,17 +29,17 @@ $(document).ready(function(){
       };
     };
 
-    function acordeon(array,num_usuarios){
+    function acordeon(array,num_usuarios, idDiv){
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor_noticia" + user,
           html: array[1][user] + ". Mensaje de " + array[0][user] + ". " + array[2][user],
-          }).appendTo("#nuevos");
+        }).appendTo(idDiv);
 
         $("<div>",{"class":"noticia" + user,
           html: array[4][user] + "<ul><li>" + array[3][user] +"</li></ul>",
-          }).appendTo("#nuevos");
+        }).appendTo(idDiv);
       };
-      $("#nuevos").accordion({heightStyle: "content"});
+      $(idDiv).accordion({heightStyle: "content"});
     };
 
 
@@ -82,7 +82,7 @@ $(document).ready(function(){
           });
 
           guardarDatos(updateArray, valores_up, num_usuarios);
-          acordeon(updateArray, num_usuarios);
+          acordeon(updateArray, num_usuarios, "#nuevos");
         })
 
         .fail(function(data){
