@@ -5,13 +5,9 @@ $(document).ready(function(){
 
   	$("#tabs").tabs();
   	$("#config").menu();
-    //$(".accordion").accordion();
 
-/*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
-    var show = false;
-    var cargado = false;
-
-    function organizar_val_update(array,val,num){
+/*CORRESPONDIENTE A GUARDAR LOS DATOS DE LOS .JSON EN ARRAY Y CREAR EL ACORDEON CON DICHOS DATOS*/
+    function guardarDatos(array,val,num){
       var i_datos = 0;
       for (user = 0; user<num; user++){
         var arrayIndex = 0;
@@ -33,7 +29,7 @@ $(document).ready(function(){
       };
     };
 
-    function acordeonUpdate(array,num_usuarios){
+    function acordeon(array,num_usuarios){
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor_noticia" + user,
           html: array[1][user] + ". Mensaje de " + array[0][user] + ". " + array[2][user],
@@ -45,6 +41,13 @@ $(document).ready(function(){
       };
       $("#nuevos").accordion({heightStyle: "content"});
     };
+
+
+
+
+/*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
+    var show = false;
+    var cargado = false;
 
     $("#newMsgs").append("hay 3 mensajes nuevos");
     $("#newMsgs").click(function(){
@@ -78,8 +81,8 @@ $(document).ready(function(){
             });
           });
 
-          organizar_val_update(updateArray, valores_up, num_usuarios);
-          acordeonUpdate(updateArray, num_usuarios);
+          guardarDatos(updateArray, valores_up, num_usuarios);
+          acordeon(updateArray, num_usuarios);
         })
 
         .fail(function(data){
