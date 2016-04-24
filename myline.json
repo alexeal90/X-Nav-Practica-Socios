@@ -1,21 +1,28 @@
 {
-    "Alex" : [{
+    "Mensaje1" : [{
             "autor": "alex",
-            "avatar": "images/nacho.jpg",
+            "avatar": "images/alex.jpg",
             "titulo": "Mensaje de prueba enviado 1",
             "contenido" : "Esto es un mensaje de prueba enviado 1",
             "fecha" : "18/04/16 18:24:47"
         }],
-    "Alex" : [{
+    "Mensaje2" : [{
             "autor": "alex",
-            "avatar": "images/nacho.jpg",
+            "avatar": "images/alex.jpg",
             "titulo": "Mensaje de prueba enviado 2",
             "contenido" : "Esto es un mensaje de prueba enviado 2",
             "fecha" : "18/04/16 14:23:21"
         }],
-    "Alex" : [{
+    "Mensaje3" : [{
             "autor": "alex",
-            "avatar": "images/nacho.jpg",
+            "avatar": "images/alex.jpg",
+            "titulo": "Mensaje de prueba enviado 3",
+            "contenido" : "Esto es un mensaje de prueba enviado 3",
+            "fecha" : "18/04/16 09:54:52"
+        }],
+    "Mensaje4" : [{
+            "autor": "alex",
+            "avatar": "images/alex.jpg",
             "titulo": "Mensaje de prueba enviado 3",
             "contenido" : "Esto es un mensaje de prueba enviado 3",
             "fecha" : "18/04/16 09:54:52"

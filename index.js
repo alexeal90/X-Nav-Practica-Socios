@@ -18,7 +18,7 @@ $(document).ready(function(){
         array[arrayIndex][user] = val[i_datos];
         i_datos++;
         arrayIndex++;
-        array[arrayIndex][user] = "<img class='col-md-2' src='" + val[i_datos] + "' height='100' width='100'></img>";
+        array[arrayIndex][user] = "<img class='col-md-2' src='" + val[i_datos] + "' height='30' width='30'></img>";
         i_datos++;
         arrayIndex++;
         array[arrayIndex][user] = val[i_datos];
@@ -36,11 +36,11 @@ $(document).ready(function(){
     function acordeonUpdate(array,num_usuarios){
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor_noticia" + user,
-          html: array[2][user] + ". Mensaje de " + array[0][user] + ". " + array[4][user],
+          html: array[1][user] + ". Mensaje de " + array[0][user] + ". " + array[2][user],
           }).appendTo("#nuevos");
 
         $("<div>",{"class":"noticia" + user,
-          html: array[1][user] + "<ul><li>" + array[3][user] +"</li></ul>",
+          html: array[4][user] + "<ul><li>" + array[3][user] +"</li></ul>",
           }).appendTo("#nuevos");
       };
       $("#nuevos").accordion({heightStyle: "content"});
