@@ -42,21 +42,49 @@ $(document).ready(function(){
       $(idDiv).accordion({heightStyle: "content"});
     };
 
-/*CORRESPONDIENTE A MOSTRAR TIMELINE.JSON*/
+/*TIMELINE.JSON*/
+
+$(function() {  /*CORRESPONDIENTE A MOSTRAR Y OCULTAR TIMELINE.JSON*/
+
+  var num_usuarios = 0;
+
+  $.getJSON("timeline.json")
+    .done(function(data) {
+      var i = 0;
+      var valores_up = [];
+      $.each(data,function (key,value){
+        num_usuarios++;
+        $.each(value,function (key,value){
+          $.each(value,function (key,value){
+            valores_up[i] = value;
+            i++;
+          });
+        });
+      });
+
+      guardarDatos(arrayJson, valores_up, num_usuarios);
+      acordeon(arrayJson, num_usuarios, "#timeline");
+    })
+
+    .fail(function(data){
+      console.log("No se ha podido cargar el archivo timeline.JSON");
+    });
+
+});
 
 
 
+/*UPDATE.JSON*/
 
-/*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
-  $(function() {
+  $(function() {  /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
     //var cargado = false;
     var num_usuarios = 0;
 
-/*se carga el json antes de nada para saber cuantos mensajes hay y poder ponerlo en el boton*/
+    /*se carga el json antes de nada para saber cuantos mensajes hay y poder ponerlo en el boton*/
     $.getJSON("update.json")
       .done(function(data) {
-        cargado = true;
+        //cargado = true;
         var i = 0;
         var valores_up = [];
         $.each(data,function (key,value){
@@ -94,7 +122,8 @@ $(document).ready(function(){
         $("#newMsgs").append("Ocultar");
       }
     });
-});
+  });
+
 /*CORRESPONDIENTE A LA PARTE DE CONVERSACIONES*/
   	$( ".draggable" ).draggable({stack: "#droppable"});
   	$( "#draggable1" ).resizable({

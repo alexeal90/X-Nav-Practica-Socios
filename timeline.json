@@ -1,21 +1,21 @@
 {
     "Nacho" : [{
             "autor": "nacho",
-            "avatar": "/images/nacho.jpg",
+            "avatar": "images/alex.jpg",
             "titulo": "Titulo de prueba de timeline nacho",
             "contenido" : "Esto es un contenido de prueba de timeline nacho",
             "fecha" : "18/04/16 20:01:23"
         }],
     "Sandra" : [{
             "autor": "sandra",
-            "avatar": "/images/sandra.jpg",
+            "avatar": "/images/alex.jpg",
             "titulo": "Mensaje de prueba de timeline de sandra",
             "contenido" : "Esto es un mensaje de prueba de timeline sandra",
             "fecha" : "18/04/16 18:15:32"
         }],
     "Jorge" : [{
             "autor": "jorge",
-            "avatar": "/images/jorge.jpg",
+            "avatar": "images/alex.jpg",
             "titulo": "Mensaje de prueba de timeline de jorge",
             "contenido" : "Esto es un mensaje de prueba de timeline jorge",
             "fecha" : "18/04/16 16:45:41"
