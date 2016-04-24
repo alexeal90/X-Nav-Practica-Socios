@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(function() {
 
-    updateArray = [[], [], [], [], []];
+    arrayJson = [[], [], [], [], []];
 
   	$("#tabs").tabs();
   	$("#config").menu();
@@ -42,14 +42,17 @@ $(document).ready(function(){
       $(idDiv).accordion({heightStyle: "content"});
     };
 
+/*CORRESPONDIENTE A MOSTRAR TIMELINE.JSON*/
 
 
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
+  function(){
     var show = false;
     //var cargado = false;
     var num_usuarios = 0;
 
+/*se carga el json antes de nada para saber cuantos mensajes hay y poder ponerlo en el boton*/
     $.getJSON("update.json")
       .done(function(data) {
         cargado = true;
@@ -90,10 +93,7 @@ $(document).ready(function(){
         $("#newMsgs").append("Ocultar");
       }
     });
-
-
-
-
+  };
 /*CORRESPONDIENTE A LA PARTE DE CONVERSACIONES*/
   	$( ".draggable" ).draggable({stack: "#droppable"});
   	$( "#draggable1" ).resizable({
