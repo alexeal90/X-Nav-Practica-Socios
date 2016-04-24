@@ -47,7 +47,6 @@ $(document).ready(function(){
 
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
-  function prueba(){
     var show = false;
     //var cargado = false;
     var num_usuarios = 0;
@@ -93,7 +92,7 @@ $(document).ready(function(){
         $("#newMsgs").append("Ocultar");
       }
     });
-  }();
+
 
 
 /*CORRESPONDIENTE A LA PARTE DE CONVERSACIONES*/
