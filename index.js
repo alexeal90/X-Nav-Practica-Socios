@@ -42,36 +42,63 @@ $(document).ready(function(){
       $(idDiv).accordion({heightStyle: "content"});
     };
 
-/*TIMELINE.JSON*/
+  /*TIMELINE.JSON*/
+  $(function() {
 
-$(function() {  /*CORRESPONDIENTE A MOSTRAR Y OCULTAR TIMELINE.JSON*/
+    var num_usuarios = 0;
 
-  var num_usuarios = 0;
-
-  $.getJSON("timeline.json")
-    .done(function(data) {
-      var i = 0;
-      var valores_up = [];
-      $.each(data,function (key,value){
-        num_usuarios++;
-        $.each(value,function (key,value){
+    $.getJSON("timeline.json")
+      .done(function(data) {
+        var i = 0;
+        var valores_up = [];
+        $.each(data,function (key,value){
+          num_usuarios++;
           $.each(value,function (key,value){
-            valores_up[i] = value;
-            i++;
+            $.each(value,function (key,value){
+              valores_up[i] = value;
+              i++;
+            });
           });
         });
+
+        guardarDatos(arrayJson, valores_up, num_usuarios);
+        acordeon(arrayJson, num_usuarios, "#timeline");
+      })
+
+      .fail(function(data){
+        console.log("No se ha podido cargar el archivo timeline.JSON");
       });
 
-      guardarDatos(arrayJson, valores_up, num_usuarios);
-      acordeon(arrayJson, num_usuarios, "#timeline");
-    })
+  });
 
-    .fail(function(data){
-      console.log("No se ha podido cargar el archivo timeline.JSON");
-    });
+  /*MYLINE.JSON*/
+  $(function() {
 
-});
+    var num_usuarios = 0;
 
+    $.getJSON("myline.json")
+      .done(function(data) {
+        var i = 0;
+        var valores_up = [];
+        $.each(data,function (key,value){
+          num_usuarios++;
+          $.each(value,function (key,value){
+            $.each(value,function (key,value){
+              valores_up[i] = value;
+              i++;
+            });
+          });
+        });
+
+        guardarDatos(arrayJson, valores_up, num_usuarios);
+        acordeon(arrayJson, num_usuarios, "#myline");
+      })
+
+      .fail(function(data){
+        console.log("No se ha podido cargar el archivo myline.JSON");
+      });
+
+  });
 
 
 /*UPDATE.JSON*/
@@ -98,7 +125,7 @@ $(function() {  /*CORRESPONDIENTE A MOSTRAR Y OCULTAR TIMELINE.JSON*/
         });
 
         guardarDatos(arrayJson, valores_up, num_usuarios);
-        acordeon(arrayJson, num_usuarios, "#nuevos");
+        acordeon(arrayJson, num_usuarios, "#update");
         $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
       })
 
@@ -111,15 +138,15 @@ $(function() {  /*CORRESPONDIENTE A MOSTRAR Y OCULTAR TIMELINE.JSON*/
     $("#newMsgs").click(function(){
       if(show == true){
 
-        $("#nuevos").hide();
+        $("#update").hide();
         show = false;
         $("#newMsgs").empty();
         $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
       }else{
-        $("#nuevos").show();
+        $("#update").show();
         show = true;
         $("#newMsgs").empty();
-        $("#newMsgs").append("Ocultar");
+        $("#newMsgs").append("Ocultar mensajes nuevos");
       }
     });
   });
