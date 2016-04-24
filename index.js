@@ -48,8 +48,8 @@ $(document).ready(function(){
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
     var cargado = false;
+    var num_usuarios = 0;
 
-    $("#newMsgs").append("hay 3 mensajes nuevos");
     $("#newMsgs").click(function(){
       if(show == true){
 
@@ -70,7 +70,6 @@ $(document).ready(function(){
           cargado = true;
           var i = 0;
           var valores_up = [];
-          var num_usuarios = 0;
           $.each(data,function (key,value){
             num_usuarios++;
             $.each(value,function (key,value){
@@ -90,7 +89,7 @@ $(document).ready(function(){
         });
       };
     });
-
+    $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
 
 
 
