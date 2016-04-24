@@ -180,7 +180,8 @@
 	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	min-height: 0; /* support: IE7 */
-	font-size: 100%;
+	font-weight: bold;
+	font-size: 200%;
 }
 .ui-accordion .ui-accordion-icons {
 	padding-left: 2.2em;
@@ -198,7 +199,8 @@
 	padding: 1em 2.2em;
 	border-top: 0;
 	overflow: auto;
-	font-size: 120%;
+	font-weight: bold;
+	font-size: 150%;
 }
 .ui-autocomplete {
 	position: absolute;
