@@ -47,8 +47,32 @@ $(document).ready(function(){
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
     var show = false;
-    var cargado = false;
+    //var cargado = false;
     var num_usuarios = 0;
+
+    $.getJSON("update.json")
+      .done(function(data) {
+        cargado = true;
+        var i = 0;
+        var valores_up = [];
+        $.each(data,function (key,value){
+          num_usuarios++;
+          $.each(value,function (key,value){
+            $.each(value,function (key,value){
+              valores_up[i] = value;
+              i++;
+            });
+          });
+        });
+
+        guardarDatos(updateArray, valores_up, num_usuarios);
+        acordeon(updateArray, num_usuarios, "#nuevos");
+      })
+
+      .fail(function(data){
+        console.log("No se ha podido cargar el archivo update.JSON");
+      });
+
 
     $("#newMsgs").click(function(){
       if(show == true){
@@ -56,38 +80,13 @@ $(document).ready(function(){
         $("#nuevos").hide();
         show = false;
         $("#newMsgs").empty();
-        $("#newMsgs").append("hay 3 mensajes nuevos");
+        $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
       }else{
         $("#nuevos").show();
         show = true;
         $("#newMsgs").empty();
         $("#newMsgs").append("Ocultar");
       }
-
-      if(cargado==false){
-        $.getJSON("update.json")
-        .done(function(data) {
-          cargado = true;
-          var i = 0;
-          var valores_up = [];
-          $.each(data,function (key,value){
-            num_usuarios++;
-            $.each(value,function (key,value){
-              $.each(value,function (key,value){
-                valores_up[i] = value;
-                i++;
-              });
-            });
-          });
-
-          guardarDatos(updateArray, valores_up, num_usuarios);
-          acordeon(updateArray, num_usuarios, "#nuevos");
-        })
-
-        .fail(function(data){
-          console.log("No se ha podido cargar el archivo JSON");
-        });
-      };
     });
     $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
 
