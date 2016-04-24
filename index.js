@@ -32,7 +32,7 @@ $(document).ready(function(){
     function acordeon(array,num_usuarios, idDiv){
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor_noticia" + user,
-          html: array[1][user] + ". Mensaje de " + array[0][user] + ". " + array[2][user],
+          html: array[1][user] + " Mensaje de " + array[0][user] + ". " + array[2][user],
         }).appendTo(idDiv);
 
         $("<div>",{"class":"noticia" + user,

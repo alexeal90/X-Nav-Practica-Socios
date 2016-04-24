@@ -1,23 +1,39 @@
 {
-    "Nacho" : [{
-            "autor": "nacho",
-            "avatar": "images/alex.jpg",
-            "titulo": "Titulo de prueba de timeline nacho",
-            "contenido" : "Esto es un contenido de prueba de timeline nacho",
-            "fecha" : "18/04/16 20:01:23"
+    "Mensaje1" : [{
+            "autor": "Ana",
+            "avatar": "images/ana.jpg",
+            "titulo": "Binder",
+            "contenido" : "Vaya final de carrera de Moto3. Binder de último a ganar,
+                          si sale primero llega media hora antes que el resto, y que
+                          pena Navarro 4",
+            "fecha" : "24/04/16 7:44:23"
         }],
-    "Sandra" : [{
-            "autor": "sandra",
-            "avatar": "/images/alex.jpg",
-            "titulo": "Mensaje de prueba de timeline de sandra",
-            "contenido" : "Esto es un mensaje de prueba de timeline sandra",
-            "fecha" : "18/04/16 18:15:32"
+    "Mensaje2" : [{
+            "autor": "Samu",
+            "avatar": "images/samu.jpg",
+            "titulo": "Lo dije",
+            "contenido" : "Siempre dije que abril traía cosas buenas :)",
+            "fecha" : "23/04/16 18:15:32"
         }],
-    "Jorge" : [{
+    "Mensaje3" : [{
+            "autor": "Adri",
+            "avatar": "images/adri.jpg",
+            "titulo": "Libro",
+            "contenido" : "Disfrutando del libro que me he comprado en el #DiaDelLibro",
+            "fecha" : "23/04/16 16:45:41"
+        }],
+    "Mensaje4" : [{
+            "autor": "Ana",
+            "avatar": "images/ana.jpg",
+            "titulo": "Cansada",
+            "contenido" : "Cansada de trabajar, #Finde llega ya!",
+            "fecha" : "21/04/16 21:03:01"
+        }],
+    "Mensaje5" : [{
             "autor": "jorge",
-            "avatar": "images/alex.jpg",
-            "titulo": "Mensaje de prueba de timeline de jorge",
-            "contenido" : "Esto es un mensaje de prueba de timeline jorge",
-            "fecha" : "18/04/16 16:45:41"
+            "avatar": "images/jorge.jpg",
+            "titulo": "Lunes",
+            "contenido" : "Buenos días, otra vez Lunes :(",
+            "fecha" : "18/04/16 08:45:41"
         }]
 }

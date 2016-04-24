@@ -1,16 +1,23 @@
 {
-    "Nacho" : [{
-            "autor": "alex",
-            "avatar": "images/alex.jpg",
-            "titulo": "Mensaje de prueba de update nacho",
-            "contenido" : "Esto es un mensaje de prueba de update nacho",
-            "fecha" : "18/04/16 18:15:32"
+    "Mensaje1" : [{
+            "autor": "Raul",
+            "avatar": "images/raul.jpg",
+            "titulo": "Siesta",
+            "contenido" : "Y ahora a descansar",
+            "fecha" : "24/04/16 15:36:42"
         }],
-    "Jorge" : [{
-            "autor": "alex",
-            "avatar": "images/alex.jpg",
-            "titulo": "Mensaje de prueba de update jorge",
-            "contenido" : "Esto es un mensaje de prueba de update jorge",
-            "fecha" : "18/04/16 16:45:41"
+    "Mensaje2" : [{
+            "autor": "Nacho",
+            "avatar": "images/nacho.jpg",
+            "titulo": "Partidazo",
+            "contenido" : "Algún día tenía que llegar @Raul enhorabuena",
+            "fecha" : "24/04/16 14:48:13"
+        }],
+    "Mensaje3" : [{
+            "autor": "Raul",
+            "avatar": "images/raul.jpg",
+            "titulo": "Partidazo",
+            "contenido" : "Vaya partidazo que hemos echado hoy. Te gane @Nacho",
+            "fecha" : "24/04/16 12:37:21"
         }]
 }
