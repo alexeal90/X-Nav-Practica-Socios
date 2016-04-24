@@ -58,14 +58,15 @@ h3 .autor{
   background-color: rgba(180, 180, 180, 0.8);
 }
 
+#tabs-3{
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
 #tabs-3 .draggable .Conver{
   font-weight: bold;
   font-size: 120%;
   height:20px
-}
-
-#tabs-3{
-  background-color: transparent;
 }
 
 #avatar{
