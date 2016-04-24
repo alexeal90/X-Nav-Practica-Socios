@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
-  function(){
+  function prueba(){
     var show = false;
     //var cargado = false;
     var num_usuarios = 0;
@@ -95,7 +95,7 @@ $(document).ready(function(){
     });
   }();
 
-  
+
 /*CORRESPONDIENTE A LA PARTE DE CONVERSACIONES*/
   	$( ".draggable" ).draggable({stack: "#droppable"});
   	$( "#draggable1" ).resizable({
