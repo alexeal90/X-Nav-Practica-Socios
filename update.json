@@ -1,14 +1,14 @@
 {
     "Nacho" : [{
             "autor": "nacho",
-            "avatar": "/images/nacho.jpg",
+            "avatar": "/images/alex.jpg",
             "titulo": "Mensaje de prueba de update nacho",
             "contenido" : "Esto es un mensaje de prueba de update nacho",
             "fecha" : "18/04/16 18:15:32"
         }],
     "Jorge" : [{
             "autor": "jorge",
-            "avatar": "/images/jorge.jpg",
+            "avatar": "/images/alex.jpg",
             "titulo": "Mensaje de prueba de update jorge",
             "contenido" : "Esto es un mensaje de prueba de update jorge",
             "fecha" : "18/04/16 16:45:41"
