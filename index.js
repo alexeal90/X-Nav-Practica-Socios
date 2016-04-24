@@ -40,7 +40,6 @@ $(document).ready(function(){
 
     function acordeonUpdate(array,num_usuarios){
       for (user = 0; user<num_usuarios; user++){
-        var arrayIndex = 0;
         $("<h3>",{"class":"autor_noticia" + user,
           html: array[2][user] + ". Mensaje de " + array[0][user] + ". " + array[4][user],
           }).appendTo("#nuevos");
