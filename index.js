@@ -47,6 +47,7 @@ $(document).ready(function(){
 
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
+function prueba(){
     var show = false;
     //var cargado = false;
     var num_usuarios = 0;
@@ -67,8 +68,8 @@ $(document).ready(function(){
           });
         });
 
-        guardarDatos(updateArray, valores_up, num_usuarios);
-        acordeon(updateArray, num_usuarios, "#nuevos");
+        guardarDatos(arrayJson, valores_up, num_usuarios);
+        acordeon(arrayJson, num_usuarios, "#nuevos");
         $("#newMsgs").append("hay " + num_usuarios + " mensajes nuevos");
       })
 
@@ -93,7 +94,7 @@ $(document).ready(function(){
       }
     });
 
-
+}();
 
 /*CORRESPONDIENTE A LA PARTE DE CONVERSACIONES*/
   	$( ".draggable" ).draggable({stack: "#droppable"});
