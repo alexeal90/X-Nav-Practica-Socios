@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(function() {
-
-    updateArray = [];
+    
+    updateArray = [[], [], [], [], []];
 
   	$("#tabs").tabs();
   	$("#config").menu();
