@@ -31,8 +31,8 @@ $(document).ready(function(){
 
     function acordeon(array,num_usuarios, idDiv){
       for (user = 0; user<num_usuarios; user++){
-        $("<h3>",{"class":"autor_noticia" + user,
-          html: array[1][user] + " Mensaje de " + array[0][user] + ". " + array[2][user],
+        $("<h3>",{"class":"autor" + user,
+          html: array[1][user] + "<p> De " + array[0][user] + ":</p><p>" + array[2][user] + "</p>",
         }).appendTo(idDiv);
 
         $("<div>",{"class":"noticia" + user,

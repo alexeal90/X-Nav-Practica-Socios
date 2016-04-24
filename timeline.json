@@ -1,23 +1,23 @@
 {
     "Mensaje1" : [{
-            "autor": "Ana",
-            "avatar": "images/ana.jpg",
+            "autor": "MotoGP",
+            "avatar": "images/motogp.jpg",
             "titulo": "Binder",
             "contenido" : "Vaya final de carrera de Moto3. Binder de último a ganar, si sale primero llega media hora antes que el resto, y que pena Navarro 4",
             "fecha" : "24/04/16 7:44:23"
         }],
     "Mensaje2" : [{
-            "autor": "Samu",
-            "avatar": "images/samu.jpg",
+            "autor": "Alberto",
+            "avatar": "images/alberto.jpg",
             "titulo": "Lo dije",
-            "contenido" : "Siempre dije que abril traía cosas buenas :)",
+            "contenido" : "Siempre dije que abril traía cosas buenas :). A ver que depara Mayo",
             "fecha" : "23/04/16 18:15:32"
         }],
     "Mensaje3" : [{
             "autor": "Adri",
             "avatar": "images/adri.jpg",
-            "titulo": "Libro",
-            "contenido" : "Disfrutando del libro que me he comprado en el #DiaDelLibro",
+            "titulo": "Dia del libro",
+            "contenido" : "Disfrutando del libro que me he comprado en el #DiaDelLibro. 'DIARIO DE UN ZOMBIE', lo recomiendo para aquellos a los que le guste la tematica ",
             "fecha" : "23/04/16 16:45:41"
         }],
     "Mensaje4" : [{
@@ -31,7 +31,7 @@
             "autor": "jorge",
             "avatar": "images/jorge.jpg",
             "titulo": "Lunes",
-            "contenido" : "Buenos días, otra vez Lunes :(",
+            "contenido" : "Buenos días, otra vez Lunes :(... a volver a empezar",
             "fecha" : "18/04/16 08:45:41"
         }]
 }
