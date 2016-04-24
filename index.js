@@ -18,33 +18,36 @@ $(document).ready(function(){
 
     function organizar_val_update(array,val,num){
       var i_datos = 0;
-      for (arrayIndex = 0; arrayIndex<5; arrayIndex++){
-        for (user = 0; user<num; user++){
-          array[arrayIndex][user] = val[i_datos];
-          i_datos++;
-          array[arrayIndex][user] = "<img class='col-md-2' src='" + val[i_datos] + "' height='100' width='100'></img>";
-          i_datos++;
-          array[arrayIndex][user] = val[i_datos];
-          i_datos++;
-          array[arrayIndex][user] = val[i_datos];
-          i_datos++;
-          array[arrayIndex][user] = val[i_datos];
-          i_datos++;
-        };
+      for (user = 0; user<num; user++){
+        var arrayIndex = 0;
+        array[arrayIndex][user] = val[i_datos];
+        i_datos++;
+        arrayIndex++;
+        array[arrayIndex][user] = "<img class='col-md-2' src='" + val[i_datos] + "' height='100' width='100'></img>";
+        i_datos++;
+        arrayIndex++;
+        array[arrayIndex][user] = val[i_datos];
+        i_datos++;
+        arrayIndex++;
+        array[arrayIndex][user] = val[i_datos];
+        i_datos++;
+        arrayIndex++;
+        array[arrayIndex][user] = val[i_datos];
+        i_datos++;
+        arrayIndex++;
       };
     };
 
     function acordeonUpdate(array,num_usuarios){
-      for (arrayIndex = 0; arrayIndex<5; arrayIndex++){
-        for (user = 0; user<num_usuarios; user++){
-          $("<h3>",{"class":"autor_noticia" + user,
-            html: array[arrayIndex][user] + ". Mensaje de " + array[arrayIndex][user] + ". " + array[arrayIndex][user],
-            }).appendTo("#nuevos");
+      for (user = 0; user<num_usuarios; user++){
+        var arrayIndex = 0;
+        $("<h3>",{"class":"autor_noticia" + user,
+          html: array[arrayIndex][user] + ". Mensaje de " + array[arrayIndex++][user] + ". " + array[arrayIndex++][user],
+          }).appendTo("#nuevos");
 
-          $("<div>",{"class":"noticia" + user,
-            html: array[arrayIndex][user] + "<ul><li>" + array[arrayIndex][user] +"</li></ul>",
-            }).appendTo("#nuevos");
-        };
+        $("<div>",{"class":"noticia" + user,
+          html: array[arrayIndex++][user] + "<ul><li>" + array[arrayIndex++][user] +"</li></ul>",
+          }).appendTo("#nuevos");
       };
       $("#nuevos").accordion({heightStyle: "content"});
     };
