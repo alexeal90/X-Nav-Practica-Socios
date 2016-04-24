@@ -1,27 +1,27 @@
 {
     "Mensaje1" : [{
-            "autor": "alex",
+            "autor": "Alex",
             "avatar": "images/alex.jpg",
             "titulo": "Estudiando",
             "contenido" : "Estoy aburrido de estudiar",
             "fecha" : "24/04/16 16:40:47"
         }],
     "Mensaje2" : [{
-            "autor": "alex",
+            "autor": "Alex",
             "avatar": "images/alex.jpg",
             "titulo": "Viernes!",
             "contenido" : "Por fin VIERNEEES!",
             "fecha" : "22/04/16 09:23:21"
         }],
     "Mensaje3" : [{
-            "autor": "alex",
+            "autor": "Alex",
             "avatar": "images/alex.jpg",
             "titulo": "Miercoles",
             "contenido" : "Energia 50% :(",
             "fecha" : "20/04/16 09:30:03"
         }],
     "Mensaje4" : [{
-            "autor": "alex",
+            "autor": "Alex",
             "avatar": "images/alex.jpg",
             "titulo": "Lunes",
             "contenido" : "Lunes con energia",
