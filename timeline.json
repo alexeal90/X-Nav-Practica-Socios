@@ -9,8 +9,8 @@
     "Mensaje2" : [{
             "autor": "Alberto",
             "avatar": "images/alberto.jpg",
-            "titulo": "Lo dije",
-            "contenido" : "Siempre dije que abril traía cosas buenas :). A ver que depara Mayo",
+            "titulo": "Abril",
+            "contenido" : "Siempre dije que Abril traía cosas buenas :). A ver que depara Mayo",
             "fecha" : "23/04/16 18:15:32"
         }],
     "Mensaje3" : [{
