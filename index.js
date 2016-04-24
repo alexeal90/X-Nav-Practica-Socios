@@ -1,12 +1,7 @@
 $(document).ready(function(){
   $(function() {
 
-    /*autor_val_up = [];
-    avatar_val_up = [];
-    titulo_val_up = [];
-    contenido_val_up = [];
-    fecha_val_up = [];*/
-    updateArray = [[], [], [], [], []];
+    updateArray = [];
 
   	$("#tabs").tabs();
   	$("#config").menu();
