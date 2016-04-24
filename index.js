@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 
 /*CORRESPONDIENTE A MOSTRAR Y OCULTAR UPDATE.JSON*/
-  function(){
+  function{
     var show = false;
     //var cargado = false;
     var num_usuarios = 0;
