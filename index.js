@@ -32,11 +32,11 @@ $(document).ready(function(){
     function acordeon(array,num_usuarios, idDiv){
       for (user = 0; user<num_usuarios; user++){
         $("<h3>",{"class":"autor" + user,
-          html: array[1][user] + "De " + array[0][user] + ":<tittle>" + array[2][user] + "</tittle>",
+          html: array[1][user] + " De " + array[0][user] + ": " + array[2][user],
         }).appendTo(idDiv);
 
         $("<div>",{"class":"noticia" + user,
-          html: array[3][user] + "<p style='position = relative, right = 5px'>" + array[4][user] + "</p>" ,
+          html: array[3][user] + "<p align='right'>" + array[4][user] + "</p>" ,
         }).appendTo(idDiv);
       };
       $(idDiv).accordion({heightStyle: "content"});
